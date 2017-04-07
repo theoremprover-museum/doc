@@ -4,3 +4,5 @@ auto
 *.bbl
 *.blg
 *.toc
+*.synctex.gz
+*.out
