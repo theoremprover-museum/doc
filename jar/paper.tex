@@ -1,10 +1,59 @@
 \documentclass[12pt]{article}
 \usepackage{url}
 \usepackage[show]{ed}
-\title{The Theorem Prover Museum\\ Conserving the Research Heritage of Automated Reasoning}
+\usepackage[hyperref,backend=bibtex,style=alphabetic]{biblatex}
+\addbibresource{kwarcpubs.bib}
+\addbibresource{extpubs.bib}
+\addbibresource{kwarccrossrefs.bib}
+\addbibresource{extcrossrefs.bib}
+\usepackage{bibtweaks}
+
+\title{The Theorem Prover Museum\\ Conserving the System Heritage of Automated Reasoning}
 \author{Michael Kohlhase\\Computer Science, FAU Erlangen-N\"urnberg\\\url{http://kwarc.info/kohlhase}}
 \begin{document}
 \maketitle
+\begin{abstract}
+  \ednote{tbw}
+\end{abstract}
+\section{Introduction}\label{sec:intro}
+
+Theorem provers are software systems that can find or check proofs for conjectures given
+in some logic. Research in theorem proving system started with the logical theorist 1955
+and has led to a succession of systems since.
+
+Theorem provers are complex software systems that have pushed the envelope of artificial
+intelligence and programming, and as such they constitute important cultural artefacts.
+
+With the current wave of retirements of the original principal investigators there is good
+chance that the systems are lost, when their group servers are shut down. This web site
+aims to preserve the ones we can still get our hands on. This idea is compatible with the
+Software Heritage initiative~\cite{SoftwareHeritage:on}, and contributes since it is based
+on GitHub repositories.
+
+The term ``museum'' may be sound bit ambitious, since the exhibition and didactic
+interpretation of the theorem provers is beyond our scope (and perhaps abilities). But the
+foremost function of a museum is the conservation of artefacts, which is what the "theorem
+prover museum" project intends to do.
+
+Note that it is not the purpose of this site to keep the theorem proving systems running
+(in many cases the compilers and dependencies have moved on, making this very
+difficult). But only to archive the source code for academic study. In particular this
+should lower the barrier of archiving systems here.
+
+\section{The Museum}
+
+The actual ``theorem prover museum'' consists of a simple web site that features a list of
+GitHub repositories that contain the actual source code 
+
+This site is the front-end to a collection of source code repositories for theorem provers
+(see below). To exhibit your system here or suggest a system for inclusion (most wanted
+list, systems believed lost), please contact Michael Kohlhase. Contributors,
+community/contact, project/issues.
+
+\section{Call for Contributors}
+
+\section{Conclusion}\label{sec:concl}
+\printbibliography
 \end{document}
 %%% Local Variables:
 %%% mode: latex
