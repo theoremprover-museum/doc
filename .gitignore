@@ -6,3 +6,5 @@ auto
 *.toc
 *.synctex.gz
 *.out
+*-blx.bib
+*.run.xml
