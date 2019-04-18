@@ -19,13 +19,12 @@
 \maketitle
 \begin{abstract}
   We present the Theorem Prover Museum, and initiative to conserve -- and make publicly
-  available -- the sources and artefacts of automated reasoning systems.  Theorem provers
-  have been at the forefront of Artificial Intelligence, stretching the limits of
-  computations, and incubating many innovations we take for granted today. Without the
-  systems themselves as preserved cultural artefacts, future historians will have
-  difficulties to study the history of science and engineering in our discipline. 
-  \keywords{theorem provers \and museum \and source code \and
-    conservation}
+  available -- the sources and source-related artefacts of automated reasoning systems.
+  Theorem provers have been at the forefront of Artificial Intelligence, stretching the
+  limits of computation, and incubating many innovations we take for granted
+  today. Without the systems themselves as preserved cultural artefacts, future historians
+  will have difficulties to study the history of science and engineering in our
+  discipline.  \keywords{theorem provers \and museum \and source code \and conservation}
 \end{abstract}
 \section{Introduction}\label{sec:intro}
 
@@ -69,15 +68,15 @@ have difficulties to study the history of science and engineering.
 
 This article reports on an initiative started by the author in spring 2016 to help
 conserve the source code of theorem provers: the ``theorem prover museum'', a collection
-of GitHub repositories repositories with source code of systems, together with a web site
-that presents them and organizes the process of acquiring more.
+of GitHub repositories with source code of systems, together with a web site that presents
+them and organizes the process of acquiring more.
 
-The term ``museum'' in the title may be sound bit ambitious, since the exhibition and
+The term ``museum'' in the title may sound a bit ambitious, since the exhibition and
 didactic interpretation of the theorem provers is beyond the scope of the initiative (and
 perhaps abilities of the founder). But the foremost function of any museum is the
 conservation of artefacts, which is what the ``theorem prover museum'' project intends to
 do. Once the source code is preserved, historians of science and engineering can start to
-do research on it and create multiple user interfaces to present it to the public. 
+do research on it and create multiple user interfaces to present it to the public.
 
 Note that it is not the purpose of the museum to keep the theorem proving systems running
 (in many cases the compilers and dependencies have moved on, making this very
@@ -94,8 +93,10 @@ The actual ``theorem prover museum'' consists of a simple web site at
 short profiles for theorem provers (see Figure~\ref{fig:cards}) depending on their museum
 status. The front page of the museum is the index of museum systems, i.e. systems that are
 no longer actively maintained but for which a code repository exists. The repositories are
-mostly collected in the GitHub organisation \texttt{theoremprover-museum}
-\url{https://github.com/theoremprover-museum}, though external are also used.
+collected in the GitHub organisation \texttt{theoremprover-museum}
+\url{https://github.com/theoremprover-museum}. An increasing number of systems already
+have repositories (git or other), here we are working towards automatically maintaining a
+local mirror repository in the museum -- just to keep the systems safe. 
 
 \begin{figure}[ht]\centering
   \includegraphics[width=\textwidth]{cards}
@@ -119,12 +120,13 @@ which form a cross-section of the discipline. The systems span a period of 50 ye
 the code ranges from machine language to high-level languages like OCaml. Even though the
 museum has some of the iconic systems of the field -- along with some of the more obscure
 ones, it does not -- unfortunately -- constitute a fully representative sample yet. More
-contributions and hunding down system sources is still needed for that.
+contributions and hunting down system sources is still needed for that.
 
 The concept of the theorem prover museum is compatible with the Software Heritage
 Initiative~\cite{SoftwareHeritage:on}, and particular GitHub-based implementation
 contributes to it automatically, since the SHI indexes GitHub repositories and the museum
-increases these.
+adds content that was unreachable to the SHI before. 
+
 
 The \textsf{swMath} information system for mathematical software~\cite{swMath:on} lists
 the museum as one of its special categories~\cite{swMath:tpmuseum:on}. This links systems
@@ -137,7 +139,7 @@ information for the museum systems.
 \section{Related Initiatives and Resources}
 We list other public resources that may give further information
 \begin{itemize}
-\item there is a small literature on the history of automated reaonsing, it
+\item there is a small literature on the history of automated reasoning, it
   includes~\cite{Bibel:ehpad07} on the early history up to 1970 and~\cite{RobVor:hoar01}
   for the next 30 years. 
 \item the Encyclopedia of Proof Systems~\cite{Wolzenlogel-Paleo:teps17} collects proof
@@ -149,13 +151,13 @@ We list other public resources that may give further information
 
 \section{Conclusion \& Call for Contributions}\label{sec:concl}
 
-We have presented an initiative for conserving the sources of historic theorem prover
-systems, i.e. systems that are no longer actively developed and in danger of loss. The
+We have presented an initiative for conserving the sources of historic theorem proversystems, i.e. systems that are no longer actively developed and in danger of loss. The
 theorem prover museum is now fully functional as a system and has attracted various
-systems. Even though it has been well received, it needs contributions from the community:
+entries. Even though it has been well received, it needs contributions from the community:
 curators who chase down sources, talk to retired researchers who might know about the
 whereabouts of source code, and even go to the basement and lug up dusty magnetic
-tapes. In short the Indiana Jones types of Automated Reasoning.
+tapes. In short the Indiana Jones types of Automated Reasoning -- without the ``stealing
+from indigenous cultures'' part.
 
 But most importantly, we need the individual researchers who, when they realize that they
 have moved on from a project to routinely submit to the theorem prover museum just as we
@@ -165,9 +167,9 @@ thus to contribute to the immaterial legacy of our research field.
 \begin{acknowledgements}
   I am grateful to many colleagues from the automated reasoning community, amongst all
   contributors I would like to single out William Farmer, who submitted the first prover:
-  IMPS to the museum, Tom Wiesing who helped me with the web page, J\"org Siemann and
+  IMPS to the museum, Tom Wiesing who helped me with the web page, J\"org Siekmann and
   Wolfgang Bibel, who were supportive to the idea from the inception, Mike Gordon and
-  Kontrad Slind who chased downp early versions of the HOL provers, and finally Rany
+  Konrad Slind who chased down early versions of the HOL provers, and finally Rany
   Pollack, who after enduring more than a dozen reminder finally dug up the LEGO source
   code and contributed it.
 \end{acknowledgements}
@@ -181,4 +183,6 @@ thus to contribute to the immaterial legacy of our research field.
 
 %  LocalWords:  maketitle tbw sec:intro NewSim:ltmcips56 SoftwareHeritage:on sec:concl
 %  LocalWords:  printbibliography ednote texttt Ontic textsf swMath swMath:on zbMATH
-%  LocalWords:  zbMATH:on Wolzenlogel-Paleo:teps17 mechanized
+%  LocalWords:  zbMATH:on Wolzenlogel-Paleo:teps17 mechanized marginalized Realizing
+%  LocalWords:  centering includegraphics textwidth provers.yml Bibel:ehpad07 vsstp:on
+%  LocalWords:  RobVor:hoar01 Siekmann Slind
