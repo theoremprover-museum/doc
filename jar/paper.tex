@@ -1,5 +1,6 @@
 \documentclass[smallcondensed]{svjour3}  
 \usepackage{url}
+\usepackage{graphicx}
 \usepackage[show]{ed}
 \usepackage[hyperref,backend=bibtex,style=alphabetic]{biblatex}
 \addbibresource{kwarcpubs.bib}
@@ -17,8 +18,14 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-  \ednote{tbw}
-  \keywords{theorem provers \and museum \and source code \and conservation}
+  We present the Theorem Prover Museum, and initiative to conserve -- and make publicly
+  available -- the sources and artefacts of automated reasoning systems.  Theorem provers
+  have been at the forefront of Artificial Intelligence, stretching the limits of
+  computations, and incubating many innovations we take for granted today. Without the
+  systems themselves as preserved cultural artefacts, future historians will have
+  difficulties to study the history of science and engineering in our discipline. 
+  \keywords{theorem provers \and museum \and source code \and
+    conservation}
 \end{abstract}
 \section{Introduction}\label{sec:intro}
 
@@ -33,12 +40,13 @@ Semantic Web, all the way to the discovery of unfair trading rules in darkpools 
 investment banks.
 
 Theorem provers are complex software systems that have pushed the envelope of artificial
-intelligence and programming, and as such they constitute important cultural
-artefacts.\ednote{give some examples, some things that were first done in theorem provers,
-  e.g. the programming language ML which heavily influenced modern typed functional
-  programs was introduced as a meta-language of the LCF theorem prover by Robin
-  Milner. Its type system was motivated by the idea that proofs could be programmed, if
-  the type of proofs can only contain logically valid proofs.}
+intelligence and programming, and as such they constitute important cultural artefacts
+that carry within them the beginnings of many aspects of computing we take for granted
+today. To name just one example: the programming language ML: (Proof) Meta-Langauge which
+heavily influenced modern typed functional programs was introduced as a meta-language of
+the LCF theorem prover by Robin Milner. Its type system was motivated by the idea that
+proofs could be programmed, if the type of proofs can only contain logically valid
+proofs.
 
 With the ongoing wave of retirements of the original principal investigators there is good
 chance that these systems are lost, when their group servers are shut down. The following
@@ -52,10 +60,12 @@ be able to read about this seminal program, but not be able to study the artefac
 itself. 
 
 In other cases, we may not have been so lucky; see~\cite{tpmuseum:tpbl:on} for a list of
-theorem provers believed lost. This is a great loss to\ednote{explain why!, history of
-  science/engineering.}
+theorem provers believed lost. This is a great loss to the culture of our discipline,
+which is in danger of becoming marginalized by the hype waves rolling through AI and
+computing. Without the systems as preserved cultural artefacts, future historians will
+have difficulties to study the history of science and engineering.
 
-\section{A Museum of Theorem Prover Source Code}
+\section{A Museum of Theorem Prover Source Code and Artefacts}
 
 This article reports on an initiative started by the author in spring 2016 to help
 conserve the source code of theorem provers: the ``theorem prover museum'', a collection
@@ -74,24 +84,42 @@ Note that it is not the purpose of the museum to keep the theorem proving system
 difficult). But only to archive the source code for academic study.  This is a
 well-considered design decision, taken to lower the barrier of archiving systems
 here. Again, once the source code is preserved -- i.e. made public by the original authors
--- other enthusiasts can revive it. Indeed this has already happened, triggered by the act
-of exposing the source.
+-- other enthusiasts can possibly revive it. Indeed this has already happened, triggered
+by the act of exposing the source in the museum.
 
-\section{The Museum}
+\section{Realizing the Museum}
 
-The actual ``theorem prover museum'' consists of a simple web site that features a list of
-GitHub repositories that contain the actual source code. The repositories are collected in
-the GitHub organisation \texttt{theoremprover-museum}
-\url{https://github.com/theoremprover-museum} and the web site consists of a central index
-page at \url{https://theoremprover-museum.github.io/}, and various administrative pages
-that collect systems, e.g. a list of ``most wanted systems'', a list of ``theorem provers
-believed lost''~\cite{tpmuseum:tpbl:on}, and a list of ``active systems''. Once in a
-while, a request for the source code of a system that has fallen below the radar of the
-community is met with an exasperated reply like ``but Ontic lives!!!'' (David McAllister
-in 2016) -- this the last page.
+The actual ``theorem prover museum'' consists of a simple web site at
+\url{https://theoremprover-museum.github.io/} that features a couple of with cards with
+short profiles for theorem provers (see Figure~\ref{fig:cards}) depending on their museum
+status. The front page of the museum is the index of museum systems, i.e. systems that are
+no longer actively maintained but for which a code repository exists. The repositories are
+mostly collected in the GitHub organisation \texttt{theoremprover-museum}
+\url{https://github.com/theoremprover-museum}, though external are also used.
 
-In the 18 months since the initiative was started, the museum has gained the source code
-of 28 systems\ednote{update}.
+\begin{figure}[ht]\centering
+  \includegraphics[width=\textwidth]{cards}
+  \caption{Three Theorem Prover Cards in the Museum}\label{fig:cards}
+\end{figure}
+
+Additionally the museum contains various administrative pages that collect systems, e.g. a
+list of ``most wanted systems'', a list of ``theorem provers believed
+lost''~\cite{tpmuseum:tpbl:on}, and a list of ``active systems''. Once in a while, a
+request for the source code of a system that has fallen below the radar of the community
+is met with an exasperated reply like ``but Ontic lives!!!'' (David McAllister in
+2016).
+
+All of these pages are statically generated from a central data
+file \texttt{provers.yml} \cite{tpmuseum:data:on} which keeps nested key/value data in
+YAML. This file can be extended by a simple pull request and has proven a low-maintenance
+solution. 
+    
+Since the initiative was started, the museum has gained the source code of 38 systems,
+which form a cross-section of the discipline. The systems span a period of 50 years, and
+the code ranges from machine language to high-level languages like OCaml. Even though the
+museum has some of the iconic systems of the field -- along with some of the more obscure
+ones, it does not -- unfortunately -- constitute a fully representative sample yet. More
+contributions and hunding down system sources is still needed for that.
 
 The concept of the theorem prover museum is compatible with the Software Heritage
 Initiative~\cite{SoftwareHeritage:on}, and particular GitHub-based implementation
@@ -102,27 +130,37 @@ The \textsf{swMath} information system for mathematical software~\cite{swMath:on
 the museum as one of its special categories~\cite{swMath:tpmuseum:on}. This links systems
 to their traces in the mathematical literature -- unfortunately, much of the theorem
 proving literature is in Computer Science conferences, which are only partially tracked in
-the unterlying \textsf{zbMATH} abstracting service~\cite{zbMATH:on}, but CS does not have
-a comparable system. Even so, 
+the underlying \textsf{zbMATH} abstracting service~\cite{zbMATH:on}, but CS does not have
+a comparable system. Even so, the \textsf{swMath} pages provide valuable additional
+information for the museum systems. 
 
 \section{Related Initiatives and Resources}
 We list other public resources that may give further information
 \begin{itemize}
+\item there is a small literature on the history of automated reaonsing, it
+  includes~\cite{Bibel:ehpad07} on the early history up to 1970 and~\cite{RobVor:hoar01}
+  for the next 30 years. 
 \item the Encyclopedia of Proof Systems~\cite{Wolzenlogel-Paleo:teps17} collects proof
   systems that are mechanized by the theorem provers.
-\item the Wikipedia page on automated theorem provers contains a list of systems
+\item the Wikipedia pages on automated theorem provers and proof assistants keep list of systems
+\item the program verification and synthesis community keeps a systems
+  list~\cite{vsstp:on} that also contains a section on theorem provers.
 \end{itemize}
 
-\section{Call for Contributions}
+\section{Conclusion \& Call for Contributions}\label{sec:concl}
 
 To exhibit your system here or suggest a system for inclusion (most wanted
 list, systems believed lost), please contact Michael Kohlhase. Contributors,
 community/contact, project/issues.
 
-\section{Conclusion}\label{sec:concl}
-
 \begin{acknowledgements}
-\ednote{J\"org,...}
+  I am grateful to many colleagues from the automated reasoning community, amongst all
+  contributors I would like to single out William Farmer, who submitted the first prover:
+  IMPS to the museum, Tom Wiesing who helped me with the web page, J\"org Siemann and
+  Wolfgang Bibel, who were supportive to the idea from the inception, Mike Gordon and
+  Kontrad Slind who chased downp early versions of the HOL provers, and finally Rany
+  Pollack, who after enduring more than a dozen reminder finally dug up the LEGO source
+  code and contributed it.
 \end{acknowledgements}
 
 \printbibliography
@@ -133,4 +171,5 @@ community/contact, project/issues.
 %%% End:
 
 %  LocalWords:  maketitle tbw sec:intro NewSim:ltmcips56 SoftwareHeritage:on sec:concl
-%  LocalWords:  printbibliography
+%  LocalWords:  printbibliography ednote texttt Ontic textsf swMath swMath:on zbMATH
+%  LocalWords:  zbMATH:on Wolzenlogel-Paleo:teps17 mechanized
