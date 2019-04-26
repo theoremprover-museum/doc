@@ -1,4 +1,4 @@
-\documentclass[smallcondensed]{svjour3}  
+\documentclass{article}  
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage[show]{ed}
@@ -9,11 +9,11 @@
 \addbibresource{extcrossrefs.bib}
 \usepackage{bibtweaks}
 \usepackage{hyperref}
-\title{The Theorem Prover Museum}
-\subtitle{Conserving the System Heritage of Automated Reasoning}
-\author{Michael Kohlhase}
-\institute{Computer Science, FAU Erlangen-N\"urnberg\\\url{http://kwarc.info/kohlhase}}
-\journalname{Journal of Automated Reasoning}
+\title{The Theorem Prover Museum -- 
+Conserving the System Heritage of Automated Reasoning}
+\author{Michael Kohlhase\\
+Computer Science, FAU Erlangen-N\"urnberg\\\url{http://kwarc.info/kohlhase}}
+%\journalname{Journal of Automated Reasoning}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -23,7 +23,7 @@
   limits of computation, and incubating many innovations we take for granted
   today. Without the systems themselves as preserved cultural artefacts, future historians
   will have difficulties to study the history of science and engineering in our
-  discipline.  \keywords{theorem provers \and museum \and source code \and conservation}
+  discipline.  %\keywords{theorem provers \and museum \and source code \and conservation}
 \end{abstract}
 \section{Introduction}\label{sec:intro}
 
@@ -98,7 +98,7 @@ have repositories (git or other), here we are working towards automatically main
 local mirror repository in the museum -- just to keep the systems safe. 
 
 \begin{figure}[ht]\centering
-  \includegraphics[width=\textwidth]{cards}
+  \includegraphics[width=\textwidth]{cards.png}
   \caption{Three Theorem Prover Cards in the Museum}\label{fig:cards}
 \end{figure}
 
@@ -163,15 +163,14 @@ have moved on from a project to routinely submit to the theorem prover museum ju
 submit a paper to a journal. The theorem prover museum gives them a place to do this and
 thus to contribute to the immaterial legacy of our research field. 
 
-\begin{acknowledgements}
-  I am grateful to many colleagues from the automated reasoning community, amongst all
-  contributors I would like to single out William Farmer, who submitted the first prover:
-  IMPS to the museum, Tom Wiesing who helped me with the web page, J\"org Siekmann and
-  Wolfgang Bibel, who were supportive to the idea from the inception, Mike Gordon and
-  Konrad Slind who chased down early versions of the HOL provers, and finally Rany
-  Pollack, who after enduring more than a dozen reminder finally dug up the LEGO source
-  code and contributed it.
-\end{acknowledgements}
+\paragraph{acknowledgements}
+I am grateful to many colleagues from the automated reasoning community, amongst all
+contributors I would like to single out William Farmer, who submitted the first prover:
+IMPS to the museum, Tom Wiesing who helped me with the web page, J\"org Siekmann and
+Wolfgang Bibel, who were supportive to the idea from the inception, Mike Gordon and Konrad
+Slind who chased down early versions of the HOL provers, and finally Rany Pollack, who
+after enduring more than a dozen reminder finally dug up the LEGO source code and
+contributed it.
 
 \printbibliography
 \end{document}
